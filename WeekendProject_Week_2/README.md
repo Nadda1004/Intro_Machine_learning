@@ -123,20 +123,20 @@
           *  FP = 0
           *  TN = 2781
           *  FN = 1
-    * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
+   * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
        *  Confusion Matrix Result: 
           *  TP = 2905
           *  FP = 0
           *  TN = 2778
           *  FN = 4
-    * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
+   * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
        *  Confusion Matrix Result:
           *  TP = 2905
           *  FP = 0
           *  TN = 2782
           *  FN = 0
   3. **k-Nearest Neighbors**
-    *  The model scored 100%.
+   * The model scored 100%.
        *  Confusion Matrix Result:
           *  TP = 2905
           *  FP = 0
