@@ -53,95 +53,47 @@
     -- poisonous: 3916 (48.2%)
     --     total: 8124 instances
     
-## Steps we followed in the first file : W2_D5_ML_Week2_Project_Dummies_Range.ipynb (dummies column split in range)
-
-1. Data Prepration
-    * We changed every columns value from one letter to whole words so it can be more understanble
-    * Before splitting we changed every column value to range from 0 to its length
-    * We splitted the Data Train 70% and test 30%, and random state values is 42
-    
-2. Modeling
+## Steps we followed:
+### Note:
+   * There is 2 files:
+      * Differences:
+         * The first file (W2_D5_ML_Week2_Project_Dummies_Range.ipynb) map the columns values to a range (0 , length of values inside the columns)
+         * The second file (W2_D5_ML-Week2-Project_Dummies_01.ipynb) map each value into columns and then (0,1)
+      * Similarities: 
+         * Changed every columns value from one letter to whole words so it can be more understanble
+         * Split train set to 70% and test set to 30%
+         * the second file (W2_D5_ML-Week2-Project_Dummies_01.ipynb) map each value into columns and then (0,1)
+      
+#### the first file : W2_D5_ML_Week2_Project_Dummies_Range.ipynb (dummies column split in range)
+  
+##### Modeling
     1. Baseline Model
       * The values predicted for each observation was the most common value in the train set (which was edible)
       * The model scored 51.08%
-        * Confusion Matrix Result:
-          * TP = 2905
-          * FP = 0
-          * TN = 0
-          * FN = 2782
     2. Logistic Regression
       * The model scored 95.25% before tuning
-         * Confusion Matrix Result:
-            * TP = 2734
-            * FP = 171
-            * TN = 2683
-            * FN = 99
       * The model scored 95.97% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
-          * Confusion Matrix Result:
-              * TP = 2751
-              * FP = 154
-              * TN = 2707
-              * FN = 75
       * The model scored 95.73% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
-          * Confusion Matrix Result:
-              *  TP = 2747
-              *  FP = 158 
-              *  TN = 2689
-              *  FN = 93
     3. k-Nearest Neighbors
-       * The model scored 99.70%.
-          * Confusion Matrix Result:
-            * TP = 2898
-            * FP = 7
-            * TN = 2772
-            * FN = 10
+    * for more details about the confusion matrix and other metrics check the notebook 
 
-
-### To Conclude:
+###### To Conclude:
 * The KNN model scored the highest and its FP and FN were the lowest rather than the other models
 
-## Steps we followed in the Second file : W2_D5_ML_Week2_Project_Dummies_01.ipynb (dummies column split to 0 and 1)
 
-1. Data Prepration
-  *  We changed every columns value from one letter to whole words so it can be more understanble
-  *  Before splitting we changed every column value to 0 and 1
-  *  We splitted the Data Train 70% and test 30%, and random state values is 42
+#### The Second file : W2_D5_ML_Week2_Project_Dummies_01.ipynb (dummies column split to 0 and 1)
 
-2. Modeling 
+##### Modeling 
   1. Baseline Model 
     *  The values predicted for each observation was the most common value in the train set (which was edible)
     *  The model scored 51.08%
-       *  Confusion Matrix Result:
-          *  TP = 2905
-          *  FP = 0
-          *  TN = 0
-          *  FN = 2782
   2. Logistic Regression
     * The model scored 99.98% before tuning 
-       *  Confusion Matrix Result:
-          *  TP = 2905
-          *  FP = 0
-          *  TN = 2781
-          *  FN = 1
-   * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
-       *  Confusion Matrix Result: 
-          *  TP = 2905
-          *  FP = 0
-          *  TN = 2778
-          *  FN = 4
-   * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
-       *  Confusion Matrix Result:
-          *  TP = 2905
-          *  FP = 0
-          *  TN = 2782
-          *  FN = 0
+    * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
+    * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
   3. **k-Nearest Neighbors**
-   * The model scored 100%.
-       *  Confusion Matrix Result:
-          *  TP = 2905
-          *  FP = 0
-          *  TN = 2782
-          *  FN = 0
+    * The model scored 100%.
+  * for more details about the confusion matrix and other metrics check the notebook 
           
-### To Conclude:
+###### To Conclude:
 *  The KNN and Logistic Regression with RandomizedSearchCV models scored the highest and its FP and FN were the lowest rather than the other models 
