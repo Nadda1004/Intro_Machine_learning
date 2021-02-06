@@ -63,6 +63,7 @@
          * Changed every columns value from one letter to whole words so it can be more understanble
          * Split train set to 70% and test set to 30%
          * the second file (W2_D5_ML-Week2-Project_Dummies_01.ipynb) map each value into columns and then (0,1)
+         * Models
       
 #### the first file : W2_D5_ML_Week2_Project_Dummies_Range.ipynb (dummies column split in range)
   
