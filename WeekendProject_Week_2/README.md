@@ -76,24 +76,23 @@
       * The model scored 95.73% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
     3. k-Nearest Neighbors
     * for more details about the confusion matrix and other metrics check the notebook 
-
 ###### To Conclude:
 * The KNN model scored the highest and its FP and FN were the lowest rather than the other models
 
+_____________________________________________________________________________________________________________
 
 #### The Second file : W2_D5_ML_Week2_Project_Dummies_01.ipynb (dummies column split to 0 and 1)
 
 ##### Modeling 
-  1. Baseline Model 
-    *  The values predicted for each observation was the most common value in the train set (which was edible)
-    *  The model scored 51.08%
-  2. Logistic Regression
-    * The model scored 99.98% before tuning 
-    * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
-    * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
-  3. **k-Nearest Neighbors**
-    * The model scored 100%.
-  * for more details about the confusion matrix and other metrics check the notebook 
-          
+     1. Baseline Model 
+       *  The values predicted for each observation was the most common value in the train set (which was edible)
+       *  The model scored 51.08%
+     2. Logistic Regression
+       * The model scored 99.98% before tuning 
+       * The model scored 99.93% after tuning with GridSearchCV (with the parameter: fit_intercept ,max_iter, penalty, solver)
+       * The model scored 100% after tuning with RandomizedSearchCV (with the parameter: C, penalty)
+     3. **k-Nearest Neighbors**
+       * The model scored 100%.
+     * for more details about the confusion matrix and other metrics check the notebook  
 ###### To Conclude:
 *  The KNN and Logistic Regression with RandomizedSearchCV models scored the highest and its FP and FN were the lowest rather than the other models 
